@@ -5,7 +5,7 @@ This repo will document me solving the challenges in the book "Art of functional
 ## Expressions
 
 ### Challenge 1: 
-The following imperative Java code that calculates the maximum of three given variables by repeatedly updating max_number 
+The following imperative Java code calculates the maximum of three given variables by repeatedly updating max_number 
 
     int x = 10;
     int y = 2;

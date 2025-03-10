@@ -2,7 +2,7 @@
 
 This repo will document me solving the challenges in the book "Art of functional programming" by Minh Quang Tran. I aim to solve the challenges in both OCaml and Haskell.
 
-## Expressions
+# 1. Expressions
 
 ### Challenge 1: 
 The following imperative Java code calculates the maximum of three given variables by repeatedly updating max_number 

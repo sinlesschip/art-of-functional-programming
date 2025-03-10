@@ -1,13 +1,12 @@
 # Art of functional programming challenges
 
-This repo will document me solving the challenges in the book "Art of functional programming" by Minh Quang Tran. I aim to solve the challenges in both OCaml and Haskell
+This repo will document me solving the challenges in the book "Art of functional programming" by Minh Quang Tran. I aim to solve the challenges in both OCaml and Haskell.
 
 ## Expressions
 
 ### Challenge 1 
 Convert the following imperative Java code that calculates the max of 3 variables by updating max_number 
 into a functional style:
-
 
     int x = 10;
     int y = 2;
@@ -21,9 +20,8 @@ into a functional style:
         max_number = z;
     }
 
-
+### Challenge 1 Solutions
 #### OCaml: 
-
 
     let x = 10 in 
     let y = 2 in 

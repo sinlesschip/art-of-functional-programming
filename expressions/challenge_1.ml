@@ -1,0 +1,35 @@
+(*
+ Java implementation from book
+ using imperative style:
+ 
+ int x = 10;
+ int y = 2;
+ int z = 5;
+
+ int max_number = x;
+ if (max_number < y) {
+    max_number = y;
+ }
+ if (max_number < z) {
+    max_number = z;
+ }
+*)
+
+(*
+ Writing in raw OCaml 
+ using functional style:
+*)
+let x = 10 in 
+let y = 2 in 
+let z = 5 in
+if x > y && x > z then x 
+    else if y > z then y else z 
+
+(*
+ Writing in OCaml using built-in max: 
+
+ let x = 10 in
+ let y = 2 in
+ let z = 5 in
+ max z (max x y)  
+*)

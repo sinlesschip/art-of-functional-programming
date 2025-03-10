@@ -4,7 +4,7 @@ This repo will document me solving the challenges in the book "Art of functional
 
 ## Expressions
 
-### Challenge 1 
+### Challenge 1: 
 Convert the following imperative Java code that calculates the max of 3 variables by updating max_number 
 into a functional style:
 
@@ -20,7 +20,7 @@ into a functional style:
         max_number = z;
     }
 
-### Challenge 1 Solutions
+### Challenge 1 Solutions:
 #### OCaml: 
 
     let x = 10 in 

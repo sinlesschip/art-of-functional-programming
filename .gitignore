@@ -1,1 +1,6 @@
+# OCaml build 
 run/
+
+# Haskell build files
+*.o
+*.hi

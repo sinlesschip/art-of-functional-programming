@@ -5,8 +5,7 @@ This repo will document me solving the challenges in the book "Art of functional
 ## Expressions
 
 ### Challenge 1: 
-Convert the following imperative Java code that calculates the max of 3 variables by updating max_number 
-into a functional style:
+The following imperative Java code that calculates the maximum of three given variables by repeatedly updating max_number 
 
     int x = 10;
     int y = 2;
@@ -19,6 +18,8 @@ into a functional style:
     if (max_number < z) {
         max_number = z;
     }
+
+Convert this code in the functional style in OCaml.
 
 ### Challenge 1 Solutions:
 #### OCaml: 
@@ -39,3 +40,21 @@ into a functional style:
            else z
 
     main = print findMax 
+
+### Challenge 2:
+The following imperative code calculates the absolute of a given variable using the variable assignment.
+
+    int x = -10;
+
+    int a = x;
+    if (x < 0) {
+        a = -x 
+    }
+
+Write this code in the functional style in OCaml.
+
+### Challenge 2 Solutions:
+
+#### OCaml
+
+    let x = 10 in if x <= 0 then -x else x

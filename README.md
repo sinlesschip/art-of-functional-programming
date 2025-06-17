@@ -114,6 +114,9 @@ too many redundant calculations.
 Write an improved version of the previous function, `super_fib: int -> int`, 
 capable of quickly computing a large Fibonacci number like the 60-th one. 
 
+### Challenge 2 Solutions:
+#### Haskell:
+
     # using Binet's formula
     super_fib :: Integral a => a -> a
     super_fib n

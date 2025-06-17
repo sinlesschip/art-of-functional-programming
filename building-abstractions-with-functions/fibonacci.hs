@@ -1,9 +1,9 @@
-niave_fib n 
+naive_fib n 
     | n <= 1 = n
     | otherwise = f1 + f2
     where
-        f1 = niave_fib (n - 1)
-        f2 = niave_fib (n - 2)
+        f1 = naive_fib (n - 1)
+        f2 = naive_fib (n - 2)
 
 -- using Binet's formula
 super_fib :: Integral a => a -> a

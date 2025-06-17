@@ -72,7 +72,7 @@ true if the input number is a prime number and false otherwise.
                 | fromIntegral current >= sqrt (fromIntegral prime) = True
                 | otherwise = is_prime' (current + 1) prime
 
-### Challenge 2: Niave Fibonacci
+### Challenge 2: Naive Fibonacci
 The Fibonacci series looks like this: 1 1 2 3 5 8 13 ... Formally:
     Fibanocci 0 = 0
     Fibanocci 1 = 1
@@ -84,12 +84,12 @@ n >= 0.
 
 ### Challenge 2 Solution:
 
-    niave_fib n 
+    naive_fib n 
         | n <= 1 = n
         | otherwise = f1 + f2
         where
-            f1 = niave_fib (n - 1)
-            f2 = niave_fib (n - 2)
+            f1 = naive_fib (n - 1)
+            f2 = naive_fib (n - 2)
 
 ### Challenge 3: Quick Fibonacci
 This is a follow up to Challenge 2. Try to call fib 60 with your solution.

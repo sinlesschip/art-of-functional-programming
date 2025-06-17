@@ -19,7 +19,7 @@ The following imperative Java code calculates the maximum of three given variabl
         max_number = z;
     }
 
-Convert this code in the functional style in OCaml.
+Convert this code in the functional style.
 
 ### Challenge 1 Solution:
 
@@ -42,7 +42,7 @@ The following imperative code calculates the absolute of a given variable using 
         a = -x 
     }
 
-Write this code in the functional style in OCaml.
+Write this code in the functional style.
 
 ### Challenge 2 Solution:
 
@@ -56,7 +56,7 @@ Write this code in the functional style in OCaml.
 
 ### Challenge 1: Prime number
 
-Write an OCaml (or Haskell) function `is_prime: integer -> bool` that returns 
+Write a function `is_prime: integer -> bool` that returns 
 true if the input number is a prime number and false otherwise.
 
 ### Challenge 1 Solution:

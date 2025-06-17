@@ -1,6 +1,6 @@
 # Art of functional programming challenges
 
-This repo will document me solving the challenges in the book "Art of functional programming" by Minh Quang Tran. I aim to solve the challenges in both OCaml and Haskell.
+This repo will document me solving the challenges in the book "Art of functional programming" by Minh Quang Tran. I aim to solve the challenges in Haskell.
 
 # 1. Expressions
 
@@ -21,25 +21,16 @@ The following imperative Java code calculates the maximum of three given variabl
 
 Convert this code in the functional style in OCaml.
 
-### Challenge 1 Solutions:
-#### OCaml: 
+### Challenge 1 Solution:
 
-    let x = 10 in 
-    let y = 2 in 
-    let z = 5 in
-    if x > y && x > z then x 
-        else if y > z then y else z
-
-#### Haskell:
-    findMax = 
-        let x = 10
+    findMax 
+        | x > y && x > z = x
+        | y > z = y
+        | otherwise = z
+        where
+            x = 10
             y = 2
             z = 5
-        in if x > y && x > z then x
-           else if y > z then y
-           else z
-
-    main = print findMax 
 
 ### Challenge 2:
 The following imperative code calculates the absolute of a given variable using the variable assignment.
@@ -53,16 +44,13 @@ The following imperative code calculates the absolute of a given variable using 
 
 Write this code in the functional style in OCaml.
 
-### Challenge 2 Solutions:
+### Challenge 2 Solution:
 
-#### OCaml
-
-    let x = 10 in if x <= 0 then -x else x
-
-#### Haskell
-
-    absolute = let x = 10 in if x <= 0 then -x else x
-    main = print absolute
+    absolute 
+        | x <= 0 = -x
+        | otherwise = x
+        where
+            x = -10 
 
 # 2. Building abstractions with functions 
 
@@ -71,8 +59,7 @@ Write this code in the functional style in OCaml.
 Write an OCaml (or Haskell) function `is_prime: integer -> bool` that returns 
 true if the input number is a prime number and false otherwise.
 
-### Challenge 1 Solutions:
-#### Haskell:
+### Challenge 1 Solution:
     
     is_prime :: Integral a => a -> Bool
     is_prime x = is_prime' 3 x
@@ -95,8 +82,7 @@ The Fibonacci series looks like this: 1 1 2 3 5 8 13 ... Formally:
 Write a function `fib: int -> int` that returns the n-th Fibonacci number where 
 n >= 0.
 
-### Challenge 2 Solutions:
-#### Haskell:
+### Challenge 2 Solution:
 
     niave_fib n 
         | n <= 1 = n
@@ -114,14 +100,13 @@ too many redundant calculations.
 Write an improved version of the previous function, `super_fib: int -> int`, 
 capable of quickly computing a large Fibonacci number like the 60-th one. 
 
-### Challenge 3 Solutions:
-#### Haskell:
+### Challenge 3 Solution:
 
-    # using Binet's formula
+    -- using Binet's formula
     super_fib :: Integral a => a -> a
     super_fib n
         | n <= 1 = n
         | otherwise = round (((gr^n) - (conj^n)) / sqrt 5)
-            where 
-                gr = (1 + sqrt 5) / 2
-                conj = (1 - sqrt 5) / 2
+        where 
+            gr = (1 + sqrt 5) / 2
+            conj = (1 - sqrt 5) / 2

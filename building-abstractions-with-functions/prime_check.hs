@@ -7,4 +7,4 @@ is_prime x = is_prime' 3 x
             | prime `mod` 2 == 0 = False
             | prime `mod` current == 0 = False
             | fromIntegral current >= sqrt (fromIntegral prime) = True
-            | otherwise = is_prime' (current + 1) prime
+            | otherwise = is_prime' (current + 2) prime

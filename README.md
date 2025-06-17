@@ -84,4 +84,41 @@ true if the input number is a prime number and false otherwise.
                 | prime `mod` current == 0 = False
                 | fromIntegral current >= sqrt (fromIntegral prime) = True
                 | otherwise = is_prime' (current + 1) prime
-    
+
+### Challenge 2: Niave Fibonacci
+The Fibonacci series looks like this: 1 1 2 3 5 8 13 ... Formally:
+    Fibanocci 0 = 0
+    Fibanocci 1 = 1
+    Fibonacci 2 = 1
+    Fibonacci n = Fibonacci (n-1) + Fibanocci (n-2) for n > 2
+
+Write a function `fib: int -> int` that returns the n-th Fibonacci number where 
+n >= 0.
+
+### Challenge 2 Solutions:
+#### Haskell:
+
+    niave_fib n 
+        | n <= 1 = n
+        | otherwise = f1 + f2
+        where
+            f1 = fib (n - 1)
+            f2 = fib (n - 2)
+
+### Challenge 3: Quick Fibonacci
+This is a follow up to Challenge 2. Try to call fib 60 with your solution.
+If it returns the results right away, skip this challenge. However, if fib 60 
+seems to run forever, it is likely because your recursive function solution performs
+too many redundant calculations.
+
+Write an improved version of the previous function, `super_fib: int -> int`, 
+capable of quickly computing a large Fibonacci number like the 60-th one. 
+
+    # using Binet's formula
+    super_fib :: Integral a => a -> a
+    super_fib n
+        | n <= 1 = n
+        | otherwise = round (((gr^n) - (conj^n)) / sqrt 5)
+            where 
+                gr = (1 + sqrt 5) / 2
+                conj = (1 - sqrt 5) / 2

@@ -102,8 +102,8 @@ n >= 0.
         | n <= 1 = n
         | otherwise = f1 + f2
         where
-            f1 = fib (n - 1)
-            f2 = fib (n - 2)
+            f1 = niave_fib (n - 1)
+            f2 = niave_fib (n - 2)
 
 ### Challenge 3: Quick Fibonacci
 This is a follow up to Challenge 2. Try to call fib 60 with your solution.
